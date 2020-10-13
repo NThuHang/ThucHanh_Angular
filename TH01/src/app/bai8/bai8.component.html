@@ -1,0 +1,48 @@
+<div class="container">
+    <p style="color:red;">Bài 8: Tính thể tích của hình chóp khi biết diện tích dáy và chiều cao</p>
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-sm-3"  style="text-align: left;">
+        Nhập giá trị cạnh đáy a:
+       </div>
+       <div class="col-sm-3">
+         <input type="text" [(ngModel)]="a" style="width: 100%;">
+       </div>
+    </div>
+    <div class="row"  style="margin-top: 20px;">
+      <div class="col-sm-3" style="text-align: left;">
+       Nhập giá trị cạnh đáy b:
+      </div>
+      <div class="col-sm-3">
+        <input type="text" [(ngModel)] = "b" style="width: 100%;">
+      </div>
+    </div>
+    <div class="row"  style="margin-top: 20px;">
+      <div class="col-sm-3" style="text-align: left;">
+        Nhập giá trị cạnh đáy c:
+       </div>
+       <div class="col-sm-3">
+         <input type="text" [(ngModel)] = "c" style="width: 100%;">
+       </div>
+    </div>
+    <div class="row"  style="margin-top: 20px;">
+        <div class="col-sm-3" style="text-align: left;">
+          Nhập giá trị chiều cao h:
+         </div>
+         <div class="col-sm-3">
+           <input type="text" [(ngModel)] = "h" style="width: 100%;">
+         </div>
+      </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-3" style="text-align: left;"></div>
+        <div class="col-sm-3">
+            <button class="btn btn-danger" (click)="TheTich();" [disabled]="a==null&&b==null&&c==null&&h==null">Tính</button>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-8" style="text-align: left;">
+        <span>Thể tích là: {{ kq }}</span>
+    </div>
+  </div>
+  

@@ -1,0 +1,41 @@
+<div class="container">
+    <p style="color:red;">Bài 7: Giải phương trình trùng phương theo lập trình hướng đối tượng</p>
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-sm-2"  style="text-align: right;">
+        Nhập giá trị a:
+       </div>
+       <div class="col-sm-3">
+         <input type="text" [(ngModel)]="a" style="width: 100%;">
+       </div>
+    </div>
+    <div class="row"  style="margin-top: 20px;">
+      <div class="col-sm-2" style="text-align: right;">
+       Nhập giá trị b:
+      </div>
+      <div class="col-sm-3">
+        <input type="text" [(ngModel)] = "b" style="width: 100%;">
+      </div>
+    </div>
+    <div class="row"  style="margin-top: 20px;">
+      <div class="col-sm-2" style="text-align: right;">
+        Nhập giá trị c:
+       </div>
+       <div class="col-sm-3">
+         <input type="text" [(ngModel)] = "c" style="width: 100%;">
+       </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-2" style="text-align: right;"></div>
+        <div class="col-sm-3">
+            <button class="btn btn-danger" (click)="Tinh();" [disabled]="a==null&&b==null&&c==null">Tính</button>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-8" style="text-align: left;">
+        <p>Phương trình vừa nhập: ({{a}})x^4+({{b}})x^2+({{c}})=0</p>
+        <span>Kết quả là: {{ kq }}</span>
+    </div>
+  </div>
+  

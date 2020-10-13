@@ -1,0 +1,22 @@
+<div class="container">
+    <p style="color:red;">Bài 4: Cho danh sách...Hãy lọc ra một danh sách mới những người có điểm thi lớn hơn 8 và quê ở Hai Phong.</p>
+    <table style="width:60%">
+        <tr>
+            <th>Stt</th>
+            <th>Họ và Tên</th>
+            <th>Quê quán</th>
+            <th>Điểm</th>
+        </tr>
+        <tr *ngFor="let m of ds ; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{m.hoten}}</td>
+            <td>{{m.quequan}}</td>
+            <td>{{m.diemthi}}</td>
+        </tr>
+        <tr style="height: 70px;" >
+            <td colspan="3"> 
+                <button class="btn btn-danger"(click)="DS_Moi();" [disabled]="ds==null" >Lọc DS</button>
+            </td>
+        </tr>
+    </table>
+</div>
