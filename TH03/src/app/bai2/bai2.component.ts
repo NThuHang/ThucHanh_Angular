@@ -1,0 +1,37 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bai2',
+  templateUrl: './bai2.component.html',
+  styleUrls: ['./bai2.component.css']
+})
+export class Bai2Component implements OnInit {
+
+  data: Product[];
+  ma_san_pham:any;
+  ten_san_pham:any;
+  original_data: any;
+  constructor() { }
+
+  ngOnInit(): void {
+    this.data = [{code:'001',name:'Sản phẩm 1',dvt:'cái',gia:85 },
+    {code:'002',name:'Sản phẩm 2',dvt:'cái',gia:632 },
+    {code:'003',name:'Sản phẩm 3',dvt:'cái',gia:532 }
+  ];
+    this.data.push({code:'004',name:'Sản phẩm 4',dvt:'cái',gia:7433 });
+    this.original_data = $.extend(true, [], this.data);
+
+    
+  } 
+  public TimKiem() {
+    if(this.ma_san_pham != null && this.ma_san_pham != '') {
+      this.data = this.original_data.filter(x=>x.code.indexOf(this.ma_san_pham)>=0);
+    } else  if(this.ten_san_pham != null && this.ten_san_pham != '') {
+      this.data = this.original_data.filter(x=>x.name.indexOf(this.ten_san_pham)>=0);
+    } else { 
+      this.data = $.extend(true, [], this.original_data);
+    } 
+  }
+
+}
+

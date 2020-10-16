@@ -7,6 +7,9 @@ import { Bai1Component } from './bai1/bai1.component';
 import { HeaderComponent } from './bai1/header/header.component';
 import { BodyComponent } from './bai1/body/body.component';
 import { FooterComponent } from './bai1/footer/footer.component';
+import { Bai2Component } from './bai2/bai2.component';
+import { SearchComponent } from './bai2/search/search.component';
+import { SharedComponent } from './bai2/shared/shared.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { FooterComponent } from './bai1/footer/footer.component';
     Bai1Component,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    Bai2Component,
+    SearchComponent,
+    SharedComponent
   ],
   imports: [
     BrowserModule,
